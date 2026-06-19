@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "emerald-sets",
+	"version": "${version}",
+	"name": "Emerald Sets",
+	"description": "Mod to bring emerald item sets in the game",
+	"authors": ["Haikmet"],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/emerald-sets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.haikmet.emeraldset.EmeraldSets"
+		],
+		"fabric-datagen": [
+			"net.haikmet.emeraldset.EmeraldSetsDataGenerator"
+		]
+	},
+	"mixins": [
+		"emerald-sets.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
