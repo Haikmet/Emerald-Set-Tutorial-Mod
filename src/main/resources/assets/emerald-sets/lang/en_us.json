@@ -1,4 +1,13 @@
 {
-  "item.emerald-sets.fluorite": "Fluorite"
+  "item.emerald-sets.emerald_sword": "Emerald Sword",
+  "item.emerald-sets.emerald_pickaxe": "Emerald Pickaxe",
+  "item.emerald-sets.emerald_axe": "Emerald Axe",
+  "item.emerald-sets.emerald_shovel": "Emerald Shovel",
+  "item.emerald-sets.emerald_hoe": "Emerald Hoe",
+  "item.emerald-sets.emerald_spear": "Emerald Spear",
 
+  "item.emerald-sets.emerald_helmet": "Emerald Helmet",
+  "item.emerald-sets.emerald_chestplate": "Emerald Chestplate",
+  "item.emerald-sets.emerald_leggings": "Emerald Leggings",
+  "item.emerald-sets.emerald_boots": "Emerald Boots"
 }

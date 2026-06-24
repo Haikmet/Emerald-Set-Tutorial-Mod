@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "emerald-sets:item/emerald_sword"
+    "layer0": "emerald-sets:item/emerald_axe"
   }
 }
