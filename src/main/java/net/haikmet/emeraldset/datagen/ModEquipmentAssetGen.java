@@ -29,7 +29,7 @@ public class ModEquipmentAssetGen extends EquipmentAssetProvider {
         this.pathProvider = packOutput.createPathProvider(PackOutput.Target.RESOURCE_PACK, "equipment");
     }
 
-private static void configure(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> consumer) {
+private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> consumer) {
         consumer.accept(ModArmorMaterials.EMERALD_KEY,
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, "emerald"))
@@ -41,7 +41,7 @@ private static void configure(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentC
 
     public CompletableFuture<?> run(final CachedOutput cache) {
         Map<ResourceKey<EquipmentAsset>, EquipmentClientInfo> equipmentAssets = new HashMap();
-        configure((id, asset) -> {
+        bootstrap((id, asset) -> {
             if (equipmentAssets.putIfAbsent(id, asset) != null) {
                 throw new IllegalStateException("Tried to register equipment asset twice for id: " + id);
             }

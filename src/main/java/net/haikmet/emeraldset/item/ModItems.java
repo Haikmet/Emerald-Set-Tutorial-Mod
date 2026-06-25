@@ -57,7 +57,7 @@ public class ModItems {
     public static void registerModItems() {
         EmeraldSets.LOGGER.info("Registering Mod Items" + EmeraldSets.MOD_ID);
 
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
             output.accept(ModItems.EMERALD_SWORD);
             output.accept(ModItems.EMERALD_PICKAXE);
             output.accept(ModItems.EMERALD_HOE);

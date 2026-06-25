@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "minecraft:emerald"
+  },
+  "pattern": [
+    "E E",
+    "E E"
+  ],
+  "result": {
+    "id": "emerald-sets:emerald_boots"
+  }
+}

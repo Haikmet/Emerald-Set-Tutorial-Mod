@@ -70,7 +70,32 @@ public class ModRecipeGen extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.EMERALD), has(Items.STICK))
                         .save(output);
 
-
+                shaped(RecipeCategory.COMBAT, ModItems.EMERALD_HELMET)
+                        .pattern("EEE")
+                        .pattern("E E")
+                        .define('E', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+                shaped(RecipeCategory.COMBAT, ModItems.EMERALD_CHESTPLATE)
+                        .pattern("E E")
+                        .pattern("EEE")
+                        .pattern("EEE")
+                        .define('E', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+                shaped(RecipeCategory.COMBAT, ModItems.EMERALD_LEGGINGS)
+                        .pattern("EEE")
+                        .pattern("E E")
+                        .pattern("E E")
+                        .define('E', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+                shaped(RecipeCategory.COMBAT, ModItems.EMERALD_BOOTS)
+                        .pattern("E E")
+                        .pattern("E E")
+                        .define('E', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
 
 
 
