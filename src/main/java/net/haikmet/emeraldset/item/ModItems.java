@@ -71,5 +71,12 @@ public class ModItems {
             output.accept(ModItems.EMERALD_BOOTS);
 
         });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
+            output.accept(ModItems.EMERALD_HELMET);
+            output.accept(ModItems.EMERALD_CHESTPLATE);
+            output.accept(ModItems.EMERALD_LEGGINGS);
+            output.accept(ModItems.EMERALD_BOOTS);
+        });
     }
 }

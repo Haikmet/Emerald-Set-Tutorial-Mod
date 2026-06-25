@@ -22,5 +22,10 @@ public class ModItemTagsGen extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.HOES).add(ModItems.getRK(ModItems.EMERALD_HOE));
         tag(ItemTags.SPEARS).add(ModItems.getRK(ModItems.EMERALD_SPEAR));
 
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.getRK(ModItems.EMERALD_HELMET));
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.getRK(ModItems.EMERALD_CHESTPLATE));
+        tag(ItemTags.LEG_ARMOR).add(ModItems.getRK(ModItems.EMERALD_LEGGINGS));
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.EMERALD_BOOTS));
+
     }
 }
