@@ -33,6 +33,10 @@ private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentC
         consumer.accept(ModArmorMaterials.EMERALD_KEY,
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, "emerald"))
+                        .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY,
+                                new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, "emerald")))
+                        .addLayers(EquipmentClientInfo.LayerType.NAUTILUS_BODY,
+                                new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, "emerald")))
                         .build());
     }
 

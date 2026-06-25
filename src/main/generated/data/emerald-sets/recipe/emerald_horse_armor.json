@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "minecraft:emerald",
+    "L": "minecraft:leather"
+  },
+  "pattern": [
+    "L E",
+    "EEE",
+    "E E"
+  ],
+  "result": {
+    "id": "emerald-sets:emerald_horse_armor"
+  }
+}

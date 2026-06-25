@@ -1,6 +1,7 @@
 package net.haikmet.emeraldset.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.haikmet.emeraldset.EmeraldSets;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,6 +12,13 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.function.Function;
 
@@ -20,7 +28,7 @@ public class ModItems {
             Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, "incorrect_for_emerald_tool"));
 
     public static final Item EMERALD_SWORD = registerItem("emerald_sword", properties -> new Item(properties.sword(
-        ModToolMaterials.EMERALD, 3, -2.4f)));
+            ModToolMaterials.EMERALD, 3, -2.4f)));
     public static final Item EMERALD_PICKAXE = registerItem("emerald_pickaxe", properties -> new Item(properties.pickaxe(
             ModToolMaterials.EMERALD, 1, -2.8f)));
     public static final Item EMERALD_AXE = registerItem("emerald_axe", properties -> new AxeItem(
@@ -30,7 +38,7 @@ public class ModItems {
     public static final Item EMERALD_HOE = registerItem("emerald_hoe", properties -> new HoeItem(
             ModToolMaterials.EMERALD, 0, -3f, properties));
     public static final Item EMERALD_SPEAR = registerItem("emerald_spear", properties -> new Item(properties.spear(
-            ModToolMaterials.EMERALD,  1, 1, 0.6F, 3F, 10.5F,
+            ModToolMaterials.EMERALD, 1, 1, 0.6F, 3F, 10.5F,
             6.5F, 5.1F, 10.5F, 4.6F)));
 
     public static final Item EMERALD_HELMET = registerItem("emerald_helmet", properties -> new Item(properties.humanoidArmor(
@@ -42,14 +50,18 @@ public class ModItems {
     public static final Item EMERALD_BOOTS = registerItem("emerald_boots", properties -> new Item(properties.humanoidArmor(
             ModArmorMaterials.EMERALD_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+    public static final Item EMERALD_HORSE_ARMOR = registerItem("emerald_horse_armor", properties -> new Item(properties.horseArmor(
+            ModArmorMaterials.EMERALD_ARMOR_MATERIAL)));
 
-
+    public static final Item EMERALD_NAUTILUS_ARMOR = registerItem("emerald_nautilus_armor", properties -> new Item(properties.nautilusArmor(
+            ModArmorMaterials.EMERALD_ARMOR_MATERIAL)));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, name)))));
 
     }
+
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();
     }
@@ -70,6 +82,8 @@ public class ModItems {
             output.accept(ModItems.EMERALD_LEGGINGS);
             output.accept(ModItems.EMERALD_BOOTS);
 
+            output.accept(ModItems.EMERALD_HORSE_ARMOR);
+            output.accept(ModItems.EMERALD_NAUTILUS_ARMOR);
         });
     }
 }

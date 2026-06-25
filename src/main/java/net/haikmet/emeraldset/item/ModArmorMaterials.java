@@ -17,6 +17,6 @@ public class ModArmorMaterials {
             Identifier.fromNamespaceAndPath(EmeraldSets.MOD_ID, "emerald"));
 
     public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new ArmorMaterial(25,
-            ArmorMaterials.makeDefense(3, 5, 7, 3, 8),
+            ArmorMaterials.makeDefense(3, 5, 7, 3, 10),
             10, SoundEvents.ARMOR_EQUIP_GENERIC, 1, 0, ModTags.Items.EMERALD_REPAIR, EMERALD_KEY);
 }

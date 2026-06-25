@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "minecraft:emerald",
+    "N": "minecraft:nautilus_shell"
+  },
+  "pattern": [
+    " E ",
+    "ENE",
+    " E "
+  ],
+  "result": {
+    "id": "emerald-sets:emerald_nautilus_armor"
+  }
+}

@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "emerald-sets:emerald"
+      }
+    ],
     "humanoid": [
       {
         "texture": "emerald-sets:emerald"
@@ -11,6 +16,11 @@
       }
     ],
     "humanoid_leggings": [
+      {
+        "texture": "emerald-sets:emerald"
+      }
+    ],
+    "nautilus_body": [
       {
         "texture": "emerald-sets:emerald"
       }
