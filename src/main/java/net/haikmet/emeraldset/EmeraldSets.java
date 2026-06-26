@@ -2,6 +2,7 @@ package net.haikmet.emeraldset;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.haikmet.emeraldset.creativemodetab.ModeCreativeModeTabs;
 import net.haikmet.emeraldset.item.ModItems;
 import net.minecraft.resources.Identifier;
 
@@ -14,6 +15,6 @@ public class EmeraldSets implements ModInitializer {
  @Override
     public void onInitialize() {
 	 	ModItems.registerModItems();
-
+        ModeCreativeModeTabs.registerCreativeTabs();
 	}
 }
